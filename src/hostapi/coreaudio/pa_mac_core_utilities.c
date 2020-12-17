@@ -742,10 +742,10 @@ OSStatus xrunCallback(
 
             if( isInput ) {
                 if( stream->inputDevice == inDevice )
-                    OSAtomicOr32( paInputOverflow, &stream->xrunFlags );
+                    PaMacOs_OSAtomicOr32( paInputOverflow, &stream->xrunFlags );
             } else {
                 if( stream->outputDevice == inDevice )
-                    OSAtomicOr32( paOutputUnderflow, &stream->xrunFlags );
+                    PaMacOs_OSAtomicOr32( paOutputUnderflow, &stream->xrunFlags );
             }
         }
 

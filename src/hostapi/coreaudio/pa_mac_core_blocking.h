@@ -64,6 +64,12 @@
 #include "pa_mac_core_utilities.h"
 
 /*
+ * Wrappers for atomic bit oparations
+ */
+int32_t PaMacOs_OSAtomicAnd32(uint32_t __theMask, volatile uint32_t *__theValue);
+int32_t PaMacOs_OSAtomicOr32(uint32_t __theMask, volatile uint32_t *__theValue);
+
+/*
  * Number of milliseconds to busy wait while waiting for data in blocking calls.
  */
 #define PA_MAC_BLIO_BUSY_WAIT_SLEEP_INTERVAL (5)
