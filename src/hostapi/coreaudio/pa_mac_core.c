@@ -65,11 +65,11 @@
 #include "pa_mac_core_internal.h"
 
 #include <string.h> /* strlen(), memcmp() etc. */
-#include <libkern/OSAtomic.h>
 
 #include "pa_mac_core.h"
 #include "pa_mac_core_utilities.h"
 #include "pa_mac_core_blocking.h"
+#include "pa_memorybarrier.h"
 
 #ifdef __cplusplus
 extern "C"
