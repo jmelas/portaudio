@@ -4342,7 +4342,7 @@ static PaError OpenStream( struct PaUtilHostApiRepresentation *hostApi,
     PaSampleFormat inputSampleFormat, outputSampleFormat;
     PaSampleFormat hostInputSampleFormat, hostOutputSampleFormat;
     int userInputChannels,userOutputChannels;
-    WAVEFORMATEXTENSIBLE wfx;
+    WAVEFORMATEXTENSIBLE wfx = { 0 };
 
     PA_LOGE_;
     PA_DEBUG(("OpenStream:sampleRate = %f\n",sampleRate));
