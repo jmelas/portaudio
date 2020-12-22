@@ -106,7 +106,7 @@
  */
 #define paVersion  paMakeVersionNumber(paVersionMajor, paVersionMinor, paVersionSubMinor)
 
-#define PA_VERSION_STRING_ PA_STRINGIZE(paVersionMajor) "." PA_STRINGIZE(paVersionMinor) "." PA_STRINGIZE(paVersionSubMinor)
+#define PA_VERSION_STRING_ PA_STRINGIZE(paVersionMajor) "." PA_STRINGIZE(paVersionMinor) "." PA_STRINGIZE(paVersionSubMinor) " john"
 #define PA_VERSION_TEXT_   "PortAudio V" PA_VERSION_STRING_ "-devel, revision " PA_STRINGIZE(PA_GIT_REVISION)
 
 int Pa_GetVersion( void )
