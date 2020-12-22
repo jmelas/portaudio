@@ -4479,7 +4479,7 @@ static PaError OpenStream( struct PaUtilHostApiRepresentation *hostApi,
         stream->userInputChannels = userInputChannels;
 
         hostInputSampleFormat = PaUtil_SelectClosestAvailableFormat( pPin->formats, inputSampleFormat );
-        if (hostInputSampleFormat == paSampleFormatNotSupported)
+        if (hostInputSampleFormat == paSampleFormatNotSupported) //todo!!! create paSampleFormatUnknown
         {
             result = paUnanticipatedHostError;
             PaWinWDM_SetLastErrorInfo(result, "PU_SCAF(%X,%X) failed (input)", pPin->formats, inputSampleFormat);

@@ -107,8 +107,9 @@ PaSampleFormat PaUtil_SelectClosestAvailableFormat(
             }
             while( (result & availableFormats) == 0 && result != paCustomFormat );
 
+            //todo!!! create paSampleFormatUnknown
             if( (result & availableFormats) == 0 )
-                result = paSampleFormatNotSupported;
+                result = (PaSampleFormat) paSampleFormatNotSupported;
         }
 
     }else{
