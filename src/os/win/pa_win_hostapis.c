@@ -80,16 +80,16 @@ PaUtilHostApiInitializer *paHostApiInitializers[] =
         PaWinDs_Initialize,
 #endif
 
-#if PA_USE_ASIO
-        PaAsio_Initialize,
-#endif
-
 #if PA_USE_WASAPI
         PaWasapi_Initialize,
 #endif
 
 #if PA_USE_WDMKS
         PaWinWdm_Initialize,
+#endif
+
+#if PA_USE_ASIO
+        PaAsio_Initialize,
 #endif
 
 #if PA_USE_SKELETON
